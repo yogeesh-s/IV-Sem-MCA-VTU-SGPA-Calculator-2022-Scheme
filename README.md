@@ -33,7 +33,7 @@ IV Sem SGPA Calculator is a web application for calculating Semester Grade Point
 
 ## GitHub Pages
 
-This project is hosted on GitHub Pages. You can access it [here](https://yogeesh-s.github.io/III-Sem-MCA-VTU-SGPA-Calculator-2022-Scheme).
+This project is hosted on GitHub Pages. You can access it [here](https://yogeesh-s.github.io/IV-Sem-MCA-VTU-SGPA-Calculator-2022-Scheme).
 
 ## Contributing
 
