@@ -114,7 +114,7 @@ const generateResult = (subjects, subject_code, credits) => {
     let gradepoints;
     if(subject_code[i] == "22MCA44"){
       gradepoints = calculateGradePoints(
-        Number(document.querySelector("#subject" + i).value)/2
+        Math.ceil(Number(document.querySelector("#subject" + i).value)/2)
       );
     }else{
       gradepoints = calculateGradePoints(
@@ -199,6 +199,7 @@ const checkValidMarks = () => {
 };
 
 const calculateGradePoints = (marks) => {
+  console.log(marks);
   if (marks >= 90) {
     return 10;
   } else if (marks >= 80 && marks <= 89) {
