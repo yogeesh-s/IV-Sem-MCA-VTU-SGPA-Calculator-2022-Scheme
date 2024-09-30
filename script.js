@@ -114,11 +114,11 @@ const generateResult = (subjects, subject_code, credits) => {
     let gradepoints;
     if(subject_code[i] == "22MCA44"){
       gradepoints = calculateGradePoints(
-        Math.ceil(Number(document.querySelector("#subject" + i).value)/2)
+        Number(document.querySelector("#subject" + i).value)/2
       );
     }else{
       gradepoints = calculateGradePoints(
-        Number(document.querySelector("#subject" + i).value)
+        document.querySelector("#subject" + i).value
       );
     }
     totalgradepoints += gradepoints;
@@ -199,18 +199,17 @@ const checkValidMarks = () => {
 };
 
 const calculateGradePoints = (marks) => {
-  console.log(marks);
   if (marks >= 90) {
     return 10;
-  } else if (marks >= 80 && marks <= 89) {
+  } else if (marks >= 80 && marks < 90) {
     return 9;
-  } else if (marks >= 70 && marks <= 79) {
+  } else if (marks >= 70 && marks < 80) {
     return 8;
-  } else if (marks >= 60 && marks <= 69) {
+  } else if (marks >= 60 && marks < 70) {
     return 7;
-  } else if (marks >= 55 && marks <= 59) {
+  } else if (marks >= 55 && marks < 60) {
     return 6;
-  } else if (marks >= 50 && marks <= 54) {
+  } else if (marks >= 50 && marks < 55) {
     return 5;
   } else {
     return 0;
